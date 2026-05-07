@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مولد إعلانات دعائية لمشروع التاجر الصغير</title>
+<style>
+:root{
+  --bg:#fff7e6;--card:#fff;--ink:#2b1a0f;--muted:#6f5743;
+  --gold:#f6b73c;--orange:#e9781a;--brown:#7a3f18;--cream:#fff2cf;
+  --green:#2f7d4c;--border:#f0d6a4;--shadow:0 18px 45px rgba(85,50,15,.15);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Tahoma,Arial,sans-serif;background:
+  radial-gradient(circle at 15% 10%,rgba(246,183,60,.35),transparent 28%),
+  radial-gradient(circle at 85% 15%,rgba(233,120,26,.22),transparent 30%),
+  linear-gradient(135deg,#fff9eb,var(--bg));
+  color:var(--ink);min-height:100vh;padding:24px;
+}
+.app{max-width:1180px;margin:auto}
+.hero{
+  background:linear-gradient(135deg,rgba(122,63,24,.96),rgba(233,120,26,.9));
+  border-radius:28px;padding:30px;color:white;box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.hero:after{content:"";position:absolute;inset:auto -60px -80px auto;width:260px;height:260px;background:rgba(255,255,255,.12);border-radius:50%}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);padding:6px 12px;border-radius:999px;margin-bottom:12px;font-weight:700}
+.hero h1{margin:0 0 10px;font-size:clamp(26px,4vw,44px);letter-spacing:-.8px}
+.hero p{margin:0;font-size:18px;opacity:.92;line-height:1.8}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.panel{background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+.panel h2{margin:0 0 16px;font-size:22px;color:var(--brown)}
+label{display:block;font-weight:700;margin:14px 0 7px;color:var(--ink)}
+input,textarea,select{
+  width:100%;border:1.5px solid #ead2a1;background:#fffdf7;color:var(--ink);
+  border-radius:14px;padding:12px 14px;font-size:16px;outline:none;transition:.2s;font-family:inherit
+}
+textarea{min-height:90px;resize:vertical;line-height:1.8}
+input:focus,textarea:focus,select:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(233,120,26,.12)}
+.hint{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.7}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.check{display:flex;align-items:center;gap:8px;background:var(--cream);border:1px solid #efd69c;padding:10px 12px;border-radius:14px;font-size:14px;color:#51341c}
+.check input{width:auto;accent-color:var(--orange)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+button{border:0;border-radius:14px;padding:12px 18px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:.2s}
+.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#2b1508;box-shadow:0 10px 20px rgba(233,120,26,.25)}
+.secondary{background:#2b1a0f;color:white}
+.ghost{background:#fff3d7;color:#663a16;border:1px solid #e5c37d}
+button:hover{transform:translateY(-1px)}
+.output{min-height:520px;white-space:pre-wrap;direction:rtl;text-align:right;line-height:1.85;font-size:15.5px;background:#fffdf8}
+.status{margin-top:12px;color:var(--green);font-weight:700;min-height:22px}
+.footer{text-align:center;margin:22px 0 4px;color:#7a6249;font-size:13px;line-height:1.7}
+@media(max-width:900px){.grid{grid-template-columns:1fr}body{padding:14px}}
+@media(max-width:650px){.row,.checks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="app">
+<section class="hero">
+<span class="badge">🍽️ مولد برومبت جاهز للتصميم</span>
+<h1>مولد إعلانات دعائية لمشروع التاجر الصغير</h1>
+</section>
+
+<section class="grid">
+<div class="panel">
+<h2>🧾 بيانات المطعم</h2>
+
+<label for="restaurantName">اسم المطعم / البسطة</label>
+<input id="restaurantName" value="اشحن جوعك" placeholder="مثال: اشحن جوعك">
+
+<label for="schoolName">اسم المدرسة</label>
+<input id="schoolName" value="" placeholder="مثال: مدرسة غرناطة الابتدائية">
+<div class="hint">اختياري: يظهر في البرومبت إذا تم تعبئته.</div>
+
+<label for="students">مشاركة الطلاب</label>
+<input id="students" value="قيس هيثم - بدر خسارة - محمد عثمان" placeholder="مثال: أحمد محمد - خالد علي - محمد سالم">
+
+<label for="products">منتجات البيع</label>
+<textarea id="products" placeholder="اكتب المنتجات مفصولة بشرطة أو فاصلة">بسبوسة - شاي كرك - ذرة - كيك</textarea>
+<div class="hint">مثال: بسبوسة - شاي كرك - ذرة - كيك</div>
+
+<label for="rights">الحقوق / الاعتماد</label>
+<input id="rights" value="إشراف وتنظيم: معلم المهارات الرقمية عبدالله بن رشيد الدريبي" placeholder="اتركها فارغة إذا لا تريد ظهور حقوق">
+<div class="hint">تظهر فقط إذا كتبتها.</div>
+
+<div class="row">
+<div>
+<label for="style">نمط التصميم</label>
+<select id="style">
+<option value="إعلاني تجاري جذاب يشبه بوستر بيع منتجات مدرسية">إعلاني تجاري جذاب</option>
+<option value="فاخر وهادئ بتكوين مرتب مناسب للطباعة">فاخر وهادئ</option>
+<option value="حيوي وطلابي بأجواء مدرسية مرحة ومنظمة">حيوي وطلابي</option>
+<option value="مودرن نظيف بخلفية بسيطة ومساحات واضحة">مودرن نظيف</option>
+</select>
+</div>
+<div>
+<label for="colors">الألوان</label>
+<select id="colors">
+<option value="الأصفر الذهبي، البرتقالي، البني الفاتح، الكريمي، مع لمسات سوداء أو خضراء حسب الحاجة">دافئة تجارية</option>
+<option value="الكريمي، الذهبي، البني الهادئ، مع لمسات خضراء منعشة">كريمي وذهبي</option>
+<option value="البرتقالي، الأصفر، الأبيض، مع لمسات خضراء وسوداء خفيفة">حيوية مشرقة</option>
+<option value="البني، الكريمي، الذهبي، ولمسات برتقالية ناعمة">كلاسيكية دافئة</option>
+</select>
+</div>
+</div>
+
+<label>خيارات إضافية</label>
+<div class="checks">
+<label class="check"><input type="checkbox" id="noPrices" checked> بدون أسعار</label>
+<label class="check"><input type="checkbox" id="noLogos" checked> بدون شعارات إضافية</label>
+<label class="check"><input type="checkbox" id="printReady" checked> مناسب للطباعة</label>
+<label class="check"><input type="checkbox" id="highQuality" checked> عالي الجودة</label>
+</div>
+
+<div class="actions">
+<button class="primary" onclick="generatePrompt()">✨ توليد البرومبت</button>
+<button class="secondary" onclick="copyPrompt()">📋 نسخ البرومبت</button>
+<button class="ghost" onclick="clearFields()">🧹 تفريغ الحقول</button>
+<button class="ghost" onclick="loadExample()">↩️ تعبئة المثال</button>
+<button class="ghost" onclick="openChatGPTImageGenerator()">🖼️ فتح مولد الصور في ChatGPT</button>
+</div>
+<div id="status" class="status"></div>
+</div>
+
+<div class="panel">
+<h2>📌 البرومبت الناتج</h2>
+<textarea id="output" class="output" placeholder="سيظهر البرومبت هنا بعد الضغط على زر توليد البرومبت..."></textarea>
+</div>
+</section>
+
+<div class="footer">برنامج التاجر الصغير - إشراف الموجه الطلابي : خالد العصيمي | برمجة المولد معلم المهارات الرقمية : عبدالله رشيد الدريبي - مدرسة غرناطة الابتدائية</div>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+
+function cleanText(value){
+  return (value || "").trim().replace(/\s+/g, " ");
+}
+
+function splitProducts(value){
+  return (value || "").split(/[-،,\n]+/g).map(x => cleanText(x)).filter(Boolean);
+}
+
+function productVisualHint(product){
+  const p = product.replace(/\s/g, "");
+  if(p.includes("بسبوس")) return "قطعة بسبوسة ذهبية شهية أو صينية بسبوسة مرتبة مع لمسة فستق أو قطر خفيف";
+  if(p.includes("كرك") || p.includes("شاي")) return "كوب شاي كرك ساخن مع بخار واضح ولمسة دافئة";
+  if(p.includes("ذرة")) return "كوب أو وعاء ذرة صفراء شهية مع حبات ذرة متناثرة";
+  if(p.includes("كيك") || p.includes("حلا") || p.includes("حلى")) return "قطعة كيك أو حلا شهية مرتبة بأسلوب تجاري جذاب";
+  if(p.includes("موهيتو")) return "كوب موهيتو بارد ومنعش مع ثلج ونعناع وشرائح ليمون";
+  if(p.includes("ايس") || p.includes("آيس")) return "كوب أو كرات آيس كريم شهية بألوان جذابة وتزيين بسيط";
+  if(p.includes("برجر")) return "برجر شهي بطبقات واضحة من الخبز والجبن والخس واللحم";
+  if(p.includes("بيتزا")) return "بيتزا ساخنة مع جبن ذائب وشرائح مرتبة";
+  if(p.includes("بطاطس")) return "بطاطس مقلية ذهبية ومقرمشة داخل علبة أو كوب أنيق";
+  if(p.includes("تورتيلا")) return "رول تورتيلا مشوي أو ملفوفة شهية بحشوة واضحة";
+  if(p.includes("ورقعنب") || p.includes("عنب")) return "ورق عنب مرتب على طبق مع شرائح ليمون وتزيين بسيط";
+  if(p.includes("عصير")) return "كوب عصير منعش بلون واضح مع فاكهة مناسبة وثلج";
+  if(p.includes("معجن")) return "تشكيلة معجنات ذهبية مخبوزة في سلة أو صينية جذابة";
+  if(p.includes("شورما")) return "ساندويتش شورما شهي ومحمّر مع حشوة واضحة";
+  return "عرض شهي وواضح للمنتج داخل بطاقة تجارية مرتبة";
+}
+
+function generatePrompt(){
+  const restaurantName = cleanText($("restaurantName").value);
+  const schoolName = cleanText($("schoolName").value);
+  const students = cleanText($("students").value);
+  const rights = cleanText($("rights").value);
+  const products = splitProducts($("products").value);
+  const style = $("style").value;
+  const colors = $("colors").value;
+
+  if(!restaurantName || !students || products.length === 0){
+    $("status").textContent = "⚠️ فضلاً عبّئ اسم المطعم، أسماء الطلاب، والمنتجات.";
+    return;
+  }
+
+  const productLines = products.map((product, i) =>
+    `${i + 1}) "${product}" — ${productVisualHint(product)}.`
+  ).join("\n");
+
+  const allowedTexts = [`"${restaurantName}"`, ...products.map(p => `"${p}"`), `"مشاركة الطلاب:"`, `"${students}"`];
+  if(schoolName) allowedTexts.push(`"${schoolName}"`);
+  if(rights) allowedTexts.push(`"${rights}"`);
+
+  const opts = [];
+  if($("noPrices").checked) opts.push("- لا تضف أسعارًا.");
+  if($("noLogos").checked) opts.push("- لا تضف شعارات أو أسماء جهات غير مذكورة.");
+  if($("printReady").checked) opts.push("- اجعل التصميم مناسبًا للطباعة.");
+  if($("highQuality").checked) opts.push("- اجعل التصميم عالي الجودة، واضح النصوص، وحاد التفاصيل.");
+
+  const rightsBlock = rights
+    ? `\nضع عبارة الحقوق / الاعتماد في أسفل التصميم بخط صغير وأنيق دون أن تزاحم أسماء الطلاب:\n"${rights}"\n`
+    : "\nلا تضع أي حقوق أو اعتماد إضافي؛ لأن خانة الحقوق فارغة.\n";
+
+  const prompt =
+`صمّم صفحة عرض أفقية مقاس A4 بأسلوب احترافي وجذاب لمطعم مدرسي/طلابي.
+
+====================
+بيانات التصميم
+====================
+
+اسم المطعم:
+[${restaurantName}]
+
+${schoolName ? `اسم المدرسة:\n[${schoolName}]\n\n` : ""}مشاركة الطلاب:
+[${students}]
+
+منتجات البيع:
+[${products.join(" - ")}]
+
+${rights ? `الحقوق / الاعتماد:\n[${rights}]\n` : ""}====================
+المطلوب في التصميم
+====================
+
+صمّم صفحة A4 أفقية بتنسيق أنيق ومتوازن، بخلفية تحاكي أجواء مونتاجات البيع والإعلانات التجارية، مع إحساس بالحيوية والشهية.
+
+استخدم ألوانًا دافئة ومريحة ومتناسقة:
+${colors}.
+
+اجعل النمط العام:
+${style}.
+
+ضع اسم المطعم "${restaurantName}" في أعلى الصفحة أو منتصفها بخط عربي كبير وواضح وجذاب، مع حضور بصري قوي ومناسب لبوستر بيع منتجات.
+${schoolName ? `\nإذا تم تعبئة اسم المدرسة، ضعه بخط أصغر وأنيق في موضع مناسب دون مزاحمة العنوان الرئيسي:\n"${schoolName}"\n` : ""}
+
+اجعل منتجات البيع بارزة بصور أو رسومات شهية ومنظمة بطريقة تجارية، مع إبراز كل منتج داخل مساحة مرتبة ومستقلة.
+
+المنتجات المطلوب عرضها فقط:
+${productLines}
+
+ضع كل منتج داخل بطاقة أو إطار أنيق، مع كتابة اسم المنتج بالعربية بوضوح أسفل الصورة أو داخل شريط مرتب.
+
+أضف عناصر بصرية مناسبة حسب نوع المنتجات، مثل:
+بخار الشاي، حبات الذرة، قطع الكيك، إضاءة ناعمة، ملمس خلفية احترافي، عناصر طعام خفيفة، ولمسات إعلانية جذابة، مع تجنب الازدحام.
+
+ضع عبارة:
+"مشاركة الطلاب:"
+بشكل واضح في أسفل التصميم أو في جانب مرتب، ثم اكتب أسماء الطلاب بخط أصغر وأنيق:
+"${students}"
+${rightsBlock}
+====================
+شروط مهمة
+====================
+
+- التصميم أفقي A4.
+- عربي بالكامل.
+- مناسب للطباعة.
+- مرتب وغير مزدحم.
+- ألوانه متناسقة.
+- أسلوبه تجاري جذاب يشبه بوستر بيع منتجات.
+- بدون أخطاء إملائية.
+- بدون نصوص إضافية غير مطلوبة.
+- حافظ على وضوح النصوص العربية واتجاهها الصحيح من اليمين إلى اليسار.
+${opts.join("\n")}
+
+النصوص الظاهرة الوحيدة المسموح بها في التصميم هي:
+${allowedTexts.join("، ")}.`;
+
+  $("output").value = prompt;
+  $("status").textContent = "✅ تم توليد البرومبت بنجاح.";
+}
+
+async function copyPrompt(){
+  const text = $("output").value.trim();
+  if(!text){$("status").textContent = "⚠️ لا يوجد برومبت لنسخه.";return;}
+  try{
+    await navigator.clipboard.writeText(text);
+    $("status").textContent = "✅ تم نسخ البرومبت إلى الحافظة.";
+  }catch(e){
+    $("output").select(); document.execCommand("copy");
+    $("status").textContent = "✅ تم نسخ البرومبت.";
+  }
+}
+
+function clearFields(){
+  $("restaurantName").value = "";
+  $("schoolName").value = "";
+  $("students").value = "";
+  $("products").value = "";
+  $("rights").value = "";
+  $("output").value = "";
+  $("status").textContent = "🧹 تم تفريغ الحقول.";
+}
+
+function loadExample(){
+  $("restaurantName").value = "اشحن جوعك";
+  $("schoolName").value = "";
+  $("students").value = "قيس هيثم - بدر خسارة - محمد عثمان";
+  $("products").value = "بسبوسة - شاي كرك - ذرة - كيك";
+  $("rights").value = "إشراف وتنظيم: معلم المهارات الرقمية عبدالله بن رشيد الدريبي";
+  generatePrompt();
+}
+
+
+function openChatGPTImageGenerator(){
+  const text = $("output").value.trim();
+  if(!text){
+    generatePrompt();
+  }
+  const promptText = $("output").value.trim();
+  if(promptText){
+    try{
+      navigator.clipboard.writeText(promptText);
+      $("status").textContent = "✅ تم نسخ البرومبت. افتح ChatGPT والصقه في مولد الصور.";
+    }catch(e){
+      $("status").textContent = "✅ تم تجهيز البرومبت. افتح ChatGPT والصقه في مولد الصور.";
+    }
+  }
+  window.open("https://chatgpt.com/?q=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D9%86%D8%B4%D8%A7%D8%A1%20%D8%B5%D9%88%D8%B1%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%A8%D8%B1%D9%88%D9%85%D8%A8%D8%AA%20%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A", "_blank");
+}
+
+window.addEventListener("load", generatePrompt);
+</script>
+</body>
+</html>
